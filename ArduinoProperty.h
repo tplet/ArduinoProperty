@@ -8,7 +8,6 @@
 // Properties
 #include <Property.h>
 #include <StateProperty.h>
-#include <Uint16StateProperty.h>
 
 // Data
 #include <DataBuffer.h>
