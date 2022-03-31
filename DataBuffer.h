@@ -26,18 +26,6 @@ public:
         // Move forward with firstDelay
         this->moveForward(bufferDelay - firstDelay);
 
-        /*
-        millis(): de 0 à 4 294 967 295 (2^32 - 1)
-        Soit un peu moins de 50j
-        Problèmes : 
-            * En cas de gros buffer et démarrage immédiat (firstDelay = 0), bufferTimePoint est négatif ce qui n'est pas autorisé
-                Solution: changement de la formule
-            * Au bout de 50j, millis repart à 0 alors que bufferTimePoint est à ~50j... Donc prochain déclenchement dans 50j ?!
-                Solution : reboot avant 50j pour redémarer les compteurs !
-        Idées :
-            * 
-        */
-
         this->started = startImmediately;
     }
 
