@@ -32,7 +32,7 @@ public:
     /**
      * Destructor
      */
-    ~DataBuffer()
+    virtual ~DataBuffer()
     {
         // Nothing
     }
