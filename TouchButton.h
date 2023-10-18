@@ -44,6 +44,17 @@ public:
     }
 
     /**
+     * MySensor: Before
+     */
+    void before()
+    {
+        pinMode(this->pin, INPUT);
+
+        // turn on pulldown resistors
+        digitalWrite(this->pin, LOW);
+    }
+
+    /**
      * Flag to indicate if button is currently pressed
      */
     bool isPressed()
