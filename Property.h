@@ -5,10 +5,10 @@
 #ifndef COM_LILICLOUD_ARDUINOPROPERTY_PROPERTY_H
 #define COM_LILICLOUD_ARDUINOPROPERTY_PROPERTY_H
 
-#include <Binder.h>
+#include <Bindable.h>
 
 template<typename T>
-class Property {
+class Property : public Bindable {
 protected:
     /**
      * Value stored
@@ -20,15 +20,11 @@ protected:
      */
     bool changed;
 
-    /**
-     * Optional binder linked to property and used to be alerted when property value change
-     */
-    Binder * binder = NULL;
 public:
     /**
      * Constructor
      */
-    Property()
+    Property() : Bindable()
     {
         this->changed = true;
     }
@@ -38,7 +34,7 @@ public:
      *
      * @param T initValue Init value to affect on init
      */
-    Property(T initValue)
+    Property(T initValue) : Bindable()
     {
         this->set(initValue);
         this->changed = true;
@@ -80,22 +76,6 @@ public:
     bool isChanged()
     {
         return this->changed;
-    }
-
-    /**
-     * Attach binder to this property
-     */
-    void setBinder(Binder * binder)
-    {
-        this->binder = binder;
-    }
-
-    /**
-     * Get Binder attached
-     */
-    Binder * getBinder()
-    {
-        return this->binder;
     }
 
 };

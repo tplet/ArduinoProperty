@@ -32,7 +32,7 @@ protected:
     /**
      * Flag to indicate if component is selected
      */
-    Property<bool> selectedProperty;
+    Property<bool> * selectedProperty;
 
 public:
 

@@ -8,7 +8,7 @@
 #include <DisplayComponent.h>
 #include <Adafruit_SSD1306.h>
 
-class SSD1306DisplayComponent {
+class SSD1306DisplayComponent : public DisplayComponent {
 protected:
     /**
      * Screen

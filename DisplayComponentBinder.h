@@ -8,7 +8,7 @@
 #include <Binder.h>
 #include <DisplayComponent.h>
 
-class DisplayComponentBinder : Binder {
+class DisplayComponentBinder : public Binder {
 protected:
     /**
      * Display component to dispatch
@@ -20,7 +20,7 @@ public:
     /**
      * Constructor
      */
-    DisplayComponentBinder(DisplayComponent * displayComponent)
+    DisplayComponentBinder(DisplayComponent * displayComponent) : Binder()
     {
         this->displayComponent = displayComponent;
     }
