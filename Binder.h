@@ -5,10 +5,6 @@
 #ifndef COM_LILICLOUD_ARDUINOPROPERTY_BINDER_H
 #define COM_LILICLOUD_ARDUINOPROPERTY_BINDER_H
 
-#ifndef COM_LILICLOUD_ARDUINOPROPERTY_BINDABLE_H
-#include <Bindable.h>
-#endif
-
 class Bindable;
 
 class Binder {
@@ -20,33 +16,19 @@ public:
     /**
      * Constructor
      */
-    Binder()
-    {
-    }
+    Binder();
 
-    void dispatch(Bindable * bindable)
-    {
-        // Nothing to do in base class
-    }
+    void dispatch(Bindable * bindable);
 
     /**
      * Bind bindable
      */
-    void bind(Bindable * bindable)
-    {
-        bindable->setBinder(this);
-    }
+    void bind(Bindable * bindable);
 
     /**
      * Unbind bindable
      */
-    void unbind(Bindable * bindable)
-    {
-        Binder * binder = bindable->getBinder();
-        if (binder != NULL && binder == *this) {
-            bindable->setBinder(NULL);
-        }
-    }
+    void unbind(Bindable * bindable);
 };
 
 #endif //COM_LILICLOUD_ARDUINOPROPERTY_BINDER_H

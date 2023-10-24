@@ -7,6 +7,7 @@
 
 #include <Binder.h>
 #include <DisplayComponent.h>
+#include <Bindable.h>
 
 class DisplayComponentBinder : public Binder {
 protected:
@@ -25,7 +26,7 @@ public:
         this->displayComponent = displayComponent;
     }
 
-    void dispatch(Property * property)
+    void dispatch(Bindable * property)
     {
         // Re-draw display component
         this->displayComponent->draw();

@@ -5,42 +5,29 @@
 #ifndef COM_LILICLOUD_ARDUINOPROPERTY_BINDABLE_H
 #define COM_LILICLOUD_ARDUINOPROPERTY_BINDABLE_H
 
-#ifndef COM_LILICLOUD_ARDUINOPROPERTY_BINDER_H
 #include <Binder.h>
-#endif
-
-class Binder;
 
 class Bindable {
 protected:
     /**
      * Optional binder linked to property and used to be alerted when property value change
      */
-    Binder * binder = NULL;
+    Binder * binder = nullptr;
 public:
     /**
      * Constructor
      */
-    Bindable()
-    {
-        
-    }
+    Bindable();
 
     /**
      * Attach binder to this property
      */
-    void setBinder(Binder * binder)
-    {
-        this->binder = binder;
-    }
+    void setBinder(Binder * binder);
 
     /**
      * Get Binder attached
      */
-    Binder * getBinder()
-    {
-        return this->binder;
-    }
+    Binder * getBinder();
 
 };
 
