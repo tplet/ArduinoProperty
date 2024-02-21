@@ -150,7 +150,7 @@ public:
     /**
      * Draw component
      */
-    void draw()
+    virtual void draw()
     {
         // Nothing to do for base class
     }

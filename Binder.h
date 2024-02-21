@@ -18,17 +18,17 @@ public:
      */
     Binder();
 
-    void dispatch(Bindable * bindable);
+    virtual void dispatch(Bindable * bindable) = 0;
 
     /**
      * Bind bindable
      */
-    void bind(Bindable * bindable);
+    virtual void bind(Bindable * bindable);
 
     /**
      * Unbind bindable
      */
-    void unbind(Bindable * bindable);
+    virtual void unbind(Bindable * bindable);
 };
 
 #endif //COM_LILICLOUD_ARDUINOPROPERTY_BINDER_H

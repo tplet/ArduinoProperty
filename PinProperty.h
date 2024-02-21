@@ -85,7 +85,7 @@ public:
      *
      * @param T value Value to store
      */
-    T set(T value)
+    virtual T set(T value)
     {
         // Parent
         Property<T>::set(value);
@@ -100,7 +100,7 @@ public:
     /**
      * Read current pin value
      */
-    T read()
+    virtual T read()
     {
         T v;
 
@@ -119,7 +119,7 @@ public:
     /**
      * Flag to indicate if pin is analog or digital
      */
-    bool isDigital()
+    virtual bool isDigital()
     {
         return this->digital;
     }
@@ -127,7 +127,7 @@ public:
     /**
      * Define pin as digital (true) or analog (false)
      */
-    void setDigital(bool digital)
+    virtual void setDigital(bool digital)
     {
         this->digital = digital;
     }
@@ -135,7 +135,7 @@ public:
     /**
      * Get pin address to read
      */
-    unsigned int getPin()
+    virtual unsigned int getPin()
     {
         return this->pin;
     }
@@ -143,7 +143,7 @@ public:
     /**
      * Set pin address to read
      */
-    void setPin(unsigned int pin)
+    virtual void setPin(unsigned int pin)
     {
         this->pin = pin;
     }
@@ -152,7 +152,7 @@ public:
      * Flag to indicate if pin is in input mode (true) or output mode (false)
      * Note that for analog pin, output is mandatory
      */
-    bool isInput()
+    virtual bool isInput()
     {
         return this->input;
     }
@@ -161,7 +161,7 @@ public:
      * Set pin mode as input (true) or output (false)
      * Note that for analog pin, output is mandatory
      */
-    void setInput(bool input)
+    virtual void setInput(bool input)
     {
         this->input = input;
 

@@ -31,7 +31,7 @@ public:
     /**
      * Set current value directly
      */
-    void setCurrentValue(T value)
+    virtual void setCurrentValue(T value)
     {
         this->set(value);
     }
@@ -39,7 +39,7 @@ public:
     /**
      * Get current value
      */
-    T getCurrentValue()
+    virtual T getCurrentValue()
     {
         return this->get();
     }
@@ -47,7 +47,7 @@ public:
     /**
      * Set target value
      */
-    void setTargetValue(T value)
+    virtual void setTargetValue(T value)
     {
         this->targetValue = value;
     }
@@ -55,7 +55,7 @@ public:
     /**
      * Get target value
      */
-    T getTargetValue()
+    virtual T getTargetValue()
     {
         return this->targetValue;
     }
@@ -63,7 +63,7 @@ public:
     /**
      * Get speed (between 0 and 1)
      */
-    float getSpeed()
+    virtual float getSpeed()
     {
         return this->speed;
     }
@@ -71,7 +71,7 @@ public:
     /**
      * Set speed (between 0 and 1)
      */
-    void setSpeed(float value)
+    virtual void setSpeed(float value)
     {
         this->speed = value;
     }
@@ -79,7 +79,7 @@ public:
     /**
      * Animate if needed and return current value
      */
-    T animate()
+    virtual T animate()
     {
         T v = this->get();
         if (this->targetValue != v) {

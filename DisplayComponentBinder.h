@@ -26,7 +26,7 @@ public:
         this->displayComponent = displayComponent;
     }
 
-    void dispatch(Bindable * property)
+    void dispatch(Bindable * bindable)
     {
         // Re-draw display component
         this->displayComponent->draw();

@@ -22,12 +22,12 @@ public:
     /**
      * Attach binder to this property
      */
-    void setBinder(Binder * binder);
+    virtual void setBinder(Binder * binder);
 
     /**
      * Get Binder attached
      */
-    Binder * getBinder();
+    virtual Binder * getBinder();
 
 };
 

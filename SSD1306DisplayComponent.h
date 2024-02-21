@@ -27,7 +27,7 @@ public:
     /**
      * Draw component
      */
-    void draw(bool display = false)
+    virtual void draw(bool display = false)
     {
         DisplayComponent::draw();
     }

@@ -12,11 +12,6 @@ Binder::Binder()
 {
 }
 
-void Binder::dispatch(Bindable * bindable)
-{
-    // Nothing to do in base class
-}
-
 /**
  * Bind bindable
  */
